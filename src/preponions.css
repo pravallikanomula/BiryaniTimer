@@ -83,7 +83,7 @@ body {
   -webkit-app-region: no-drag;
 }
 .top-bar-title {
-  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Berkshire Swash', curvise;
   font-size: 1.2rem;
   color: #3e260e;
   -webkit-app-region: no-drag;
@@ -97,6 +97,20 @@ body {
   -webkit-app-region: no-drag;
 }
 
-button:hover {
+.button:hover {
   transform: scale(1.05);
+}
+.pro-tip {
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 248, 220, 0.9); /* light biryani-beige */
+  border-left: 6px solid #d1913c;
+  font-family: 'Anek Kannada', sans-serif;
+  font-size: 1rem;
+  color: #3e260e;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }

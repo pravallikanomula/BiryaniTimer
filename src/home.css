@@ -11,6 +11,8 @@ body {
   text-align: center;
   overflow: hidden;
   opacity: 0.8;
+  position: relative;
+  overflow-x: hidden; 
 }
 
 /* Top Bar */
@@ -23,7 +25,7 @@ body {
   display: flex;
   justify-content: space-between;  /* THIS aligns title left, icons right */
   align-items: center;
-  
+  padding-right: 16px;
   padding: 0 12px;
   z-index: 10;
 }
@@ -48,7 +50,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;  
-  margin-right: 5 px;
+  margin-right: 5px;
   -webkit-app-region: no-drag;
 }
 
@@ -126,9 +128,10 @@ body {
   width: 28px;
   height: 28px;
   margin-left: 8px;
-  cursor: pointer;
-  -webkit-app-region: no-drag;
+  object-fit: contain;      /* NEW */
+  box-sizing: border-box;   /* NEW */
 }
+
 .on-label {
   color: #dab9b9; /* example: rich brown */
 }

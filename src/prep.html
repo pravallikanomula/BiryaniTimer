@@ -21,27 +21,29 @@
       </div>  
     <h1>What do you want to start with..?</h1>
     <div class="image-grid">
-      <div class="image-button" onclick="goTo('onions-timer.html')">
+      <div class="image-button" onclick="goTo('preponions.html')">
         <img src="assets/onions.jpeg" alt="Onions">
         <p class="on-label">Fly Onions</p>
       </div>
-      <div class="image-button" onclick="goTo('rice-timer.html')">
+      <div class="image-button" onclick="goTo('preprice.html')">
         <img src="assets/ricee.jpg" alt="Rice">
         <p class="on-label">Cook Rice</p>
       </div>
-      <div class="image-button" onclick="goTo('chicken-timer.html')">
+      <div class="image-button" onclick="goTo('prepchicken.html')">
         <img src="assets/chicken.jpeg" alt="Chicken">
         <p class="on-label">Cook Chicken</p>
       </div>
-      <div class="image-button" onclick="goTo('biryani-timer.html')">
+      <div class="image-button" onclick="goTo('prepbir.html')">
         <img src="assets/biryani.jpeg" alt="Biryani">
         <p class="on-label">Biryani</p>
       </div>
     </div>
-    
+  </div>
+  
     <div class="button-group">
-      <button onclick="goTo('home.html')">home</button>
+      <button onclick="goTo('birmasala.html')">Masala</button>
     </div>
+  
 
     <script>
         function goTo(page) {
@@ -49,6 +51,12 @@
         }
     </script>
     <script>
+    document.getElementById('homeBtn').addEventListener('click', () => {
+      window.location.href = 'home.html';
+    });
+  </script>
+    <script>
+      
       document.getElementById('minimizeBtn').addEventListener('click', () => {
         window.electronAPI.minimize();
       });

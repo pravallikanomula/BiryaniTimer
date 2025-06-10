@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <title>Roasting Masalas</title>
+  <link rel="stylesheet" href="birmasala.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ana&family=Anta&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>    
+<body>
+  <div class="top-bar">
+    <div class="top-bar-title">THE PERFECT BIRYANI</div>
+    <div style="flex-grow: 1;"></div>
+    <img src="assets/homelogo.png" class="window-btn" id="homeBtn" />
+    <img src="assets/minilogo.png" class="window-btn" id="minimizeBtn" />
+    <img src="assets/closelogo.png" class="window-btn" id="closeBtn" />
+  </div>
+
+  <h1>ROASTING MASALAS</h1>
+
+  <div class="section">
+    <h2>WHOLE SPICES TO ROAST</h2>
+    <ul>
+      <li>CORIANDER SEEDS | धनिया – 2 TBSP</li>
+      <li>CUMIN SEEDS | जीरा – 1 TSP</li>
+      <li>CARAWAY SEEDS | शाह जीरा – 2 TSP</li>
+      <li>GREEN CARDAMOM | हरी इलायची – 2 TBSP</li>
+      <li>BLACK CARDAMOM | बड़ी इलाइची – 5–6 NOS.</li>
+      <li>CINNAMON | दालचीनी – 3 INCH</li>
+      <li>BLACK PEPPERCORNS | काली मिर्च – 1 TBSP</li>
+      <li>SPICY RED CHILLIES | तीखी लाल मिर्च – 7–8 NOS.</li>
+      <li>BAY LEAF | तेज पत्ता – 7–8 NOS.</li>
+      <li>CLOVES | लौंग – 2 TSP</li>
+      <li>MACE | जावित्री – 3 NOS.</li>
+      <li>KASURI METHI | कसूरी मेथी – 1 TBSP</li>
+      <li>NUTMEG | जायफल – 1/2 NOS. (GRATED)</li>
+      <li>TURMERIC POWDER | हल्दी – 1/2 TSP</li>
+      <li>SALT | नमक – A PINCH</li>
+    </ul>
+
+    <h2>INSTRUCTIONS</h2>
+    <ul>
+      <li>ROAST ALL THE WHOLE SPICES ON A LOW FLAME UNTIL AROMATIC (3–4 MINUTES).</li>
+      <li>STIR OCCASIONALLY TO AVOID BURNING.</li>
+      <li>LET THE SPICES COOL COMPLETELY.</li>
+      <li>GRIND INTO A FINE POWDER AND STORE IN AN AIRTIGHT JAR.</li>
+      <li>THIS MASALA CAN BE USED FOR LAYERING OR MARINATING.</li>
+    </ul>
+  </div>
+
+  <button onclick="goTo('home.html')">HOME</button>
+  <button onclick="goTo('chicken-timer.html')">NEXT STEP</button>
+
+  <div class="pro-tip">
+    <strong>PRO TIP:</strong> ROASTING THE SPICES LOW AND SLOW BRINGS OUT THE FLAVORS. LET THEM COOL COMPLETELY BEFORE GRINDING TO AVOID MOISTURE.
+  </div>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+  <script>
+    document.getElementById('homeBtn').addEventListener('click', () => {
+      window.location.href = 'home.html';
+    });
+  </script>
+  <script>
+    document.getElementById('minimizeBtn').addEventListener('click', () => {
+      window.electronAPI.minimize();
+    });
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      window.electronAPI.close();
+    });
+  </script>
+</body>
+</html>

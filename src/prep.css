@@ -1,0 +1,184 @@
+/* General layout */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('assets/backg.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Anek Kannada', sans-serif;
+  color: #3e260e;
+  padding-top: 60px;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0.8;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.1); /* light fade; increase for stronger effect */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Top Bar */
+.top-bar {
+  position: absolute;
+  top: 0;
+  height: 40px;
+  width: 100%;
+  background: rgba(217, 166, 115, 0.85);
+  display: flex;
+  justify-content: space-between;  /* THIS aligns title left, icons right */
+  align-items: center;
+  
+  padding: 0 12px;
+  z-index: 1;
+}
+.top-icons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+  margin-right: 5px;
+}
+
+.top-bar-title {
+  font-size: 1.2rem;
+  margin-left: 10px;
+  font-family: 'Berkshire Swash', cursive;
+  font-weight: bold;
+  color: #3e260e;
+  -webkit-app-region: no-drag;
+}
+
+.top-bar-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+  margin-right: 5 px;
+  -webkit-app-region: no-drag;
+}
+
+.icon-btn {
+  background: #f4dab5;
+  border: none;
+  padding: 8px 10px;
+  margin-left: 8px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  z-index : 1;
+}
+
+.image-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.image-button img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.image-button p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-family: 'Ana', sans-serif;
+  color: #5c2c1e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.image-button:hover {
+  transform: scale(1.05);
+}
+
+.prep-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #d3b38e, #d2bb91);
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-family: 'Anek Kannada', sans-serif;
+  font-weight: bold;
+  color: #f1d3cc;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prep-btn:hover {
+  transform: scale(1.05);
+}
+
+
+
+.window-btn {
+  width: 28px;
+  height: 28px;
+  margin-left: 8px;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+.on-label {
+  color: #dab9b9; /* example: rich brown */
+}
+
+/* Heading */
+h1 {
+  font-family: 'Anta', sans-serif;
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.button-group {
+  z-index: 1;
+  position: absolute;
+  top: 45px; /* adjust this to move up/down */
+  left: 80%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.button-group button {
+  font-family: 'Ana', sans-serif;
+  background: linear-gradient(135deg, #cfb08a, #f7eedc, #cfb08a);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #833131;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-group button:hover {
+  transform: scale(1.05);
+}

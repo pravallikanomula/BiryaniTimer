@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <title>BIYANI LAYERING</title>
+  <link rel="stylesheet" href="prepbir.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ana&family=Anta&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>    
+<body>
+  <div class="top-bar">
+    <div class="top-bar-title">THE PERFECT BIRYANI</div>
+    <div style="flex-grow: 1;"></div>
+      <img src="assets/homelogo.png" class="window-btn" id="homeBtn" />
+      <img src="assets/minilogo.png" class="window-btn" id="minimizeBtn" />
+      <img src="assets/closelogo.png" class="window-btn" id="closeBtn" />
+  </div>
+
+  <h1>LAYERING THE BIRYANI</h1>
+
+  <div class="section">
+    <h2>STEPS BEFORE STARTING THE STOVE</h2>
+    <ul>
+      <li>IN A THICK-BOTTOMED VESSEL OR BIRYANI HANDI, GREASE THE BOTTOM WITH GHEE.</li>
+      <li>START WITH A LAYER OF THE COOKED MARINATED CHICKEN.</li>
+      <li>NEXT, SPREAD A LAYER OF PARTIALLY COOKED BASMATI RICE (ABOUT 60–70% COOKED).</li>
+      <li>SPRINKLE SOME FRIED ONIONS (BIRISTA) OVER THE RICE.</li>
+      <li>ADD CHOPPED MINT AND CORIANDER LEAVES.</li>
+      <li>DRIZZLE A MIX OF SAFFRON MILK OR YELLOW FOOD COLOR SOAKED IN WARM MILK.</li>
+      <li>ADD A FEW TEASPOONS OF WARM GHEE EVENLY OVER THE TOP.</li>
+      <li>REPEAT THE LAYERING IF NEEDED — RICE → BIRISTA → HERBS → GHEE.</li>
+      <li>ENSURE THE TOPMOST LAYER IS RICE WITH GHEE AND SAFFRON.</li>
+      <li>COVER THE VESSEL WITH A TIGHT LID OR SEAL WITH DOUGH TO TRAP STEAM.</li>
+      <li>COOK THE BIRYANI FOR 5 MINUTES ON HIGH FLAME AND THEN TURN TO SIMMER AND START THE TIMER.</li>
+    </ul>
+  </div>
+
+  <button onclick="goTo('home.html')">HOME</button>
+  <button onclick="goTo('biryani-timer.html')">START DUM COOKING</button>
+
+  <div class="pro-tip">
+    <strong>PRO TIP:</strong> SPRINKLE A LITTLE WATER AROUND THE EDGES BEFORE SEALING THE POT TO CREATE MORE STEAM. ALWAYS LET THE BIRYANI SIT UNDISTURBED FOR 5–10 MINUTES AFTER DUM FOR BEST RESULTS.
+  </div>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+  <script>
+    document.getElementById('homeBtn').addEventListener('click', () => {
+      window.location.href = 'home.html';
+    });
+  </script>
+  <script>
+    document.getElementById('minimizeBtn').addEventListener('click', () => {
+      window.electronAPI.minimize();
+    });
+
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      window.electronAPI.close();
+    });
+  </script>
+
+</body>
+</html>

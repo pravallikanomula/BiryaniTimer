@@ -59,12 +59,7 @@ body {
   margin-left: 8px;
   cursor: pointer;
 }
-.top-bar-title {
- 
-  font-size: 1.2rem;
-  color: #3e260e;
-  -webkit-app-region: no-drag;
-}
+
 
 .content {
   position: absolute;
