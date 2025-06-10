@@ -1,0 +1,112 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Andika', 'Segoe UI', sans-serif;
+}
+.top-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(217,166,115, 1.0); /* 85% opaque */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 12px;
+  z-index: 10;
+}
+
+.window-btn {
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.container {
+  background: url('assets/backg.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: #3e260e;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.01); /* translucent overlay */
+  z-index: 0;
+}
+
+.top-icons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+  
+}
+.top-bar {
+  padding: 0 12px;
+}
+
+.icon-btn {
+  background: #f4dab5;
+  border: none;
+  padding: 8px 10px;
+  margin-left: 8px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.title {
+  position: absolute;
+  top: 1cm;     
+  left: 1cm;   
+  font-family: 'Andika', sans-serif;
+  font-size: 2rem;
+  
+  line-height: 1.2;
+  color: #583C1F;
+  z-index: 1;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* shadow added */
+}
+
+.button-group {
+  z-index: 1;
+  position: absolute;
+  top: 300px;  /* or whatever value pushes it down just enough */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-btn {
+  background: linear-gradient(135deg,#ECCFAE, #FFEBC6, #ECCFAE); 
+  border: none;
+  border-radius: 12px;
+  font-family: 'Arapey', sans-serif;
+  padding: 12px 24px;
+  margin: 0.5rem auto;
+  width: 160px;
+  font-size: 1.2rem;
+  color: #833131; /* light creamy white text */
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.main-btn:hover {
+  transform: scale(1.05);
+}

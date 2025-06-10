@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <title>Ingredients for Chicken biryani (for 4 servings)</title>
+  <link rel="stylesheet" href="ingredients.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ana&family=Anta&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>    
+<body>
+  <div class="top-bar">
+    <div class="top-bar-title">The Perfect Biryani</div>
+    <div style="flex-grow: 1;"></div>
+      <img src="assets/homelogo.png" class="window-btn" id="homeBtn" />
+      <img src="assets/minilogo.png" class="window-btn" id="minimizeBtn" />
+      <img src="assets/closelogo.png" class="window-btn" id="closeBtn" />
+  </div>
+
+  <h1>INGREDIENTS</h1>
+
+  <div class="section">
+    <h2>For Marinating the Chicken</h2>
+    <ul>
+      <li>1 kg chicken (bone-in, cut into pieces)</li>
+      <li>1 cup yogurt (curd)</li>
+      <li>2 tablespoons ginger-garlic paste</li>
+      <li>2 teaspoons red chili powder</li>
+      <li>1 teaspoon turmeric powder</li>
+      <li>2 teaspoons coriander powder</li>
+      <li>1 teaspoon garam masala</li>
+      <li>Salt – to taste</li>
+      <li>Juice of 1 lemon</li>
+      <li>A handful of chopped mint leaves</li>
+      <li>A handful of chopped coriander leaves</li>
+      <li>2 green chilies (sliced)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>For Rice</h2>
+    <ul>
+      <li>1 kg basmati rice (soaked for 30 minutes)</li>
+      <li>3–4 liters water (for boiling)</li>
+      <li>2–3 bay leaves</li>
+      <li>4–5 cloves</li>
+      <li>3–4 green cardamoms</li>
+      <li>1 black cardamom (optional)</li>
+      <li>1 cinnamon stick</li>
+      <li>Salt – to taste</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>For Frying Onions</h2>
+    <ul>
+      <li>3–4 large onions (thinly sliced)</li>
+      <li>Oil – for deep frying</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>For Assembling</h2>
+    <ul>
+      <li>4 tablespoons ghee (clarified butter)</li>
+      <li>A few saffron strands soaked in 1/4 cup warm milk (or yellow food color)</li>
+      <li>Fried onions (from above)</li>
+      <li>Extra mint and coriander leaves for layering</li>
+    </ul>
+  </div>
+
+  <button onclick="goTo('home.html')">Make Biryani</button>
+  <button onclick="goTo('index.html')">Cancel</button>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+  <script>
+    document.getElementById('homeBtn').addEventListener('click', () => {
+      window.location.href = 'home.html'; // or 'home.html' if needed
+    });
+  </script>
+
+  <script>
+    document.getElementById('minimizeBtn').addEventListener('click', () => {
+      window.electronAPI.minimize();
+    });
+
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      window.electronAPI.close();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Anek Kannada', sans-serif;
+  background: url('assets/potatochef.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: #3e260e;
+  padding-top: 60px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  height: 40px;
+  width: 100%;
+  background: rgba(217, 166, 115, 0.85);
+  display: flex;
+  justify-content: space-between;  /* THIS aligns title left, icons right */
+  align-items: center;
+  
+  padding: 0 12px;
+  z-index: 10;
+}
+.top-icons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+  margin-right: 5px;
+}
+
+.top-bar-title {
+  font-size: 1.2rem;
+  margin-left: 10px;
+  font-family: 'Berkshire Swash', cursive;
+  font-weight: bold;
+  color: #3e260e;
+  -webkit-app-region: no-drag;
+}
+
+.top-bar-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+  margin-right: 5 px;
+  -webkit-app-region: no-drag;
+}
+.window-btn {
+  width: 28px;
+  height: 28px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.top-bar-title {
+ 
+  font-size: 1.2rem;
+  color: #3e260e;
+  -webkit-app-region: no-drag;
+}
+
+.content {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: flex-end;
+  gap: 3rem;
+}
+
+/* Text styles */
+.content h1 {
+  font-size: 1.2rem;
+  white-space: nowrap; 
+  color: #9E5B5B;
+  text-shadow: 1px 1px 2px rgba(158, 91, 91, 0.4);
+  margin: 0;
+  position: relative;
+  top: -28px
+}
+
+.content h2 {
+  font-size: 3rem; /* bigger than h1 but smaller overall */
+  color: #9E5B5B;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin: 0;
+}
+/* Stir Occasionally note */
+.stir-note {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 1.5rem;
+  
+  color: #9E5B5B;
+  text-shadow: 1px 1px 2px rgba(101, 24, 24, 0.6);
+}

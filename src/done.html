@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Done</title>
+    <link rel="stylesheet" href="done.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Kannada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-title">The Perfect Biryani</div>
+      <div class="top-bar-controls">
+        <img src="assets/homelogo.png" class="window-btn" id="homeBtn" />
+        <img src="assets/minilogo.png" class="window-btn" id="minimizeBtn" />
+        <img src="assets/closelogo.png" class="window-btn" id="closeBtn" />
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+      <div class="content">
+        <h1>You are one step closer..! 🎉</h1>
+      </div>
+      <div class="button-group">
+        <button class="button" onclick="goHome()">Stop</button>
+        <button class="button" onclick="snooze()">Snooze</button>
+      </div>
+    </div>
+
+    <!-- Audio Alarm -->
+    <audio id="alarm" src="alarm.mp3" autoplay></audio>
+
+    <!-- Scripts -->
+    <script>
+      function goHome() {
+        window.location.href = 'home.html';
+      }
+
+      function snooze() {
+        const alarm = document.getElementById('alarm');
+        alarm.pause();
+        alarm.currentTime = 0;
+        alert("Snoozed for 5 minutes!");
+
+        setTimeout(() => {
+          alarm.play().catch(() => {
+            console.warn("Autoplay blocked again on snooze.");
+          });
+        }, 300000); // 5 minutes
+      }
+
+      // Handle audio play attempt on page load
+      window.addEventListener('DOMContentLoaded', () => {
+        const alarm = document.getElementById('alarm');
+        alarm.play().catch(() => {
+          console.warn('Autoplay blocked, trying again...');
+        });
+
+        // Optional: handle top bar button clicks if you're using Electron
+        document.getElementById('homeBtn').addEventListener('click', goHome);
+        document.getElementById('minimizeBtn').addEventListener('click', () => {
+          if (window.electronAPI) window.electronAPI.minimize();
+        });
+        document.getElementById('closeBtn').addEventListener('click', () => {
+          if (window.electronAPI) window.electronAPI.close();
+        });
+      });
+    </script>
+  </body>
+</html>

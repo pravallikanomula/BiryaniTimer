@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Anek Kannada', sans-serif;
+  background: url('assets/done.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #3e260e;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Bar */
+.top-bar {
+  position: absolute;
+  top: 0;
+  
+  height: 40px;
+  width: 100%;
+  background: rgba(217, 166, 115, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  z-index: 10;
+  -webkit-app-region: drag;
+}
+
+.top-bar-title {
+  font-size: 1.2rem;
+  margin-left: 10px;
+  font-family: 'Berkshire Swash', cursive;
+  font-weight: bold;
+  color: #3e260e;
+  -webkit-app-region: no-drag;
+}
+.top-icons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+  margin-right: 5px;
+}
+
+.top-bar-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+  margin-right: 5 px;
+  -webkit-app-region: no-drag;
+}
+
+.window-btn {
+  width: 28px;
+  height: 28px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+/* Centered Wrapper */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* center vertically */
+  align-items: center;
+  margin-top: -40px; /* slightly above middle */
+  gap: 2rem;
+  text-align: center;
+}
+
+/* Heading Text */
+.content h1 {
+  font-size: 1.5rem;
+  color: #9E5B5B;
+  text-shadow: 1px 1px 2px rgba(158, 91, 91, 0.4);
+  margin: 0;
+}
+
+/* Button Styling */
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(168, 46, 46, 0.8);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #a40000;
+}

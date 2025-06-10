@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Perfect Biryani</title>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Andika&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <img src="assets/minilogo.png" class="window-btn" id="minimizeBtn" />
+        <img src="assets/closelogo.png" class="window-btn" id="closeBtn" />
+      </div>
+
+      <h1 class="title">The Perfect<br />Biryani</h1>
+
+      <div class="button-group">
+        <button class="main-btn" onclick="goTo('ingredients.html')">Ingredients</button><br/>
+        <button class="main-btn" onclick="goTo('home.html')">Start</button>
+      </div>
+    </div>
+
+    <script>
+      function goTo(page) {
+        window.location.href = page;
+      }
+    </script>
+    <script>
+      document.getElementById('minimizeBtn').addEventListener('click', () => {
+        window.electronAPI.minimize();
+      });
+
+      document.getElementById('closeBtn').addEventListener('click', () => {
+        window.electronAPI.close();
+      });
+    </script>
+
+  </body>
+</html>
